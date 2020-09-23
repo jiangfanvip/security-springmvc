@@ -44,6 +44,10 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addViewController("/").setViewName("login");
     }
 
+    /**
+     * 注册过滤器
+     * @param registry
+     */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new SimpleAuthenticationInterceptor()).addPathPatterns("/user/**");

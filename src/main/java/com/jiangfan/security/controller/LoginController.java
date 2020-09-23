@@ -31,7 +31,7 @@ public class LoginController {
     }
 
     @GetMapping("/user/resources1/{userName}")
-    public UserDto getUserResouces(HttpSession session, @PathVariable("userName") String userName) {
+    public UserDto getUserResouces(HttpSession session) {
         UserDto userDto = (UserDto) session.getAttribute("_user");
 //        if (userDto == null) {
 //            userDto = new UserDto();
@@ -42,7 +42,7 @@ public class LoginController {
     }
 
     @GetMapping("/user/resources2/{userName}")
-    public UserDto getUserResouces2(HttpSession session, @PathVariable("userName") String userName) {
+    public UserDto getUserResouces2(HttpSession session) {
         UserDto userDto = (UserDto) session.getAttribute("_user");
 //        if (userDto == null) {
 //            userDto = new UserDto();
